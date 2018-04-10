@@ -8,8 +8,13 @@ Client = discord.Client()
 client = commands.Bot(command_prefix = "+")
 
 @client.event
-async def on_ready():
-    print("Bot is ready!")
+async def list_servers():
+    await client.wait_until_ready()
+    while not client.is_closed:
+        print("Jackaboi Bot Is Now Online Here Are The Current servers:")
+        for server in client.servers:
+            print(server.name)
+        await asyncio.sleep(600)
     await client.change_presence(game=discord.Game(name="In Beta Dont Use To Many Commands!"))
 
 @client.event
@@ -35,4 +40,5 @@ async def on_message (message):
         
 
 
-client.run ("Put Bot Token Here")
+client.loop.create_task(list_servers())
+client.run ("BOT TOKEN")
