@@ -3,6 +3,7 @@ from discord.ext.commands import Bot
 from discord.ext import commands
 import asyncio
 import time
+import os
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = "+")
@@ -74,4 +75,4 @@ async def unmute(ctx, member: discord.Member):
         await client.say("You don't have permissions to execute these command! :stuck_out_tongue: ")
         
 client.loop.create_task(list_servers())
-client.run ("BOT TOKEN")
+client.run(os.getenv('TOKEN'))
