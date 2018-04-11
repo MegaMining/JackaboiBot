@@ -34,7 +34,7 @@ async def on_message(message):
         msg = 'To Give Feedback Join The Creators Discord https://discord.gg/hbgVy88'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith('+website'):
-        msg = 'Checkout Our Website http://skyhaven.ga'.format(message)
+        msg = 'This Command Is Disabled By Jackaboi#8319'.format(message)
         await client.send_message(message.channel, msg)
     await client.process_commands(message)
 
