@@ -82,10 +82,6 @@ async def unmute(ctx, member: discord.Member):
         await client.say("You don't have permissions to execute these command! :stuck_out_tongue: ")
   
 
-@client.event
-
-async def on_message(message):
-
     if message.content.upper().startswith('!PING'):
 
         userID = message.author.id
