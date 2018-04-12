@@ -25,7 +25,7 @@ async def on_message(message):
         msg = 'Contacting The <@344967220025098242> Someone Needs Help!'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith('+commands'):
-        msg = ' {0.author.mention} The Bot Commands are `+hello` `+bye` `+mute` `+unmute` `+help` `+website` `+invite` `+feedback` `+commands` More Comeing Soon!'.format(message)
+c        msg = ' {0.author.mention} The Bot Commands are `+hello` `+bye` `+mute` `+unmute` `+help` `+website` `+invite` `+feedback` `+commands` More Comeing Soon!'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith('+invite'):
         msg = 'Want To Invte Me To Your Discord Press This Link https://goo.gl/94ZSqo'.format(message)
@@ -38,6 +38,9 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
     await client.process_commands(message)
     if message.content.startswith('marsh'):
+        msg = '{0.author.mention} Marsh Is Awesome! :smiley: '.format(message)
+        await client.send_message(message.channel, msg)
+    if message.content.startswith('Marsh'):
         msg = '{0.author.mention} Marsh Is Awesome! :smiley: '.format(message)
         await client.send_message(message.channel, msg)
     
