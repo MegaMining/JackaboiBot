@@ -23,7 +23,7 @@ async def on_message(message):
         msg = 'Goodbye {0.author.mention} Hope To See You Soon :wave:'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith('+help'):
-        msg = 'Contacting The <@344967220025098242> Someone Needs Help!'.format(message)
+        msg = 'This Command Is Disabled By Jackaboi#8319'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith('+commands'):
         msg = ' {0.author.mention} The Bot Commands are `+hello` `+bye` `+say` `+8ball` `+mute` `+unmute` `+help` `+website` `+invite` `+feedback` `+commands` More Comeing Soon!'.format(message)
