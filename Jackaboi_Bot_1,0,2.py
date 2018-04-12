@@ -46,7 +46,7 @@ async def on_message(message):
     
     @client.event
 
-async def on_message(message):
+ async def on_message(message):
 
     if message.content.upper().startswith('!PING'):
 
