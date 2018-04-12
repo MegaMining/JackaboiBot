@@ -81,6 +81,7 @@ async def unmute(ctx, member: discord.Member):
     else:
         await client.say("You don't have permissions to execute these command! :stuck_out_tongue: ")
   
+@client.event
 
     if message.content.upper().startswith('!PING'):
 
@@ -101,5 +102,6 @@ async def unmute(ctx, member: discord.Member):
         #args[1:] = Hey There
 
         await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
+
 client.loop.create_task(list_servers())
 client.run(os.getenv('TOKEN'))
