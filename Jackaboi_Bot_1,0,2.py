@@ -80,7 +80,13 @@ async def unmute(ctx, member: discord.Member):
         await client.say("{} has been unmuted! :white_check_mark: ".format(member.mention))
     else:
         await client.say("You don't have permissions to execute these command! :stuck_out_tongue: ")
-  
+    if message.content.upper().startswith('+say'):
+        args = message.content.split(" ")
+        #args[0] = +say
+        #args[1] = Hey
+        #args[2] = There
+        #args[1:] = Hey There
+        await client.send_message(message.channel, "%s" % (" ".join(args[1:]))) 
 
 client.loop.create_task(list_servers())
 client.run(os.getenv('TOKEN'))
