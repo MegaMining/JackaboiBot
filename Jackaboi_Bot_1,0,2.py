@@ -80,6 +80,30 @@ async def unmute(ctx, member: discord.Member):
         await client.say("{} has been unmuted! :white_check_mark: ".format(member.mention))
     else:
         await client.say("You don't have permissions to execute these command! :stuck_out_tongue: ")
-        
+  
+
+@client.event
+
+async def on_message(message):
+
+    if message.content.upper().startswith('!PING'):
+
+        userID = message.author.id
+
+        await client.send_message(message.channel, "<@%s> Pong!" % (userID))
+
+    if message.content.upper().startswith('!SAY'):
+
+        args = message.content.split(" ")
+
+        #args[0] = !SAY
+
+        #args[1] = Hey
+
+        #args[2] = There
+
+        #args[1:] = Hey There
+
+        await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
 client.loop.create_task(list_servers())
 client.run(os.getenv('TOKEN'))
