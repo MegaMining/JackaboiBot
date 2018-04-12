@@ -44,7 +44,13 @@ async def on_message(message):
         msg = '{0.author.mention} Marsh Is Awesome! :smiley: '.format(message)
         await client.send_message(message.channel, msg)
    
-
+    if message.content.startswith('+say'):
+        args = message.content.split(" ")
+        #args[0] = +say
+        #args[1] = Hey
+        #args[2] = There
+        #args[1:] = Hey There
+        await client.send_message(message.channel, "%s" % (" ".join(args[1:]))) 
 
 async def list_servers():
     await client.wait_until_ready()
@@ -80,13 +86,8 @@ async def unmute(ctx, member: discord.Member):
         await client.say("{} has been unmuted! :white_check_mark: ".format(member.mention))
     else:
         await client.say("You don't have permissions to execute these command! :stuck_out_tongue: ")
-    if message.content.startswith('+say'):
-        args = message.content.split(" ")
-        #args[0] = +say
-        #args[1] = Hey
-        #args[2] = There
-        #args[1:] = Hey There
-        await client.send_message(message.channel, "%s" % (" ".join(args[1:]))) 
+   
 
+#Always all if message.content all of then on async def on_message not on bottom
 client.loop.create_task(list_servers())
 client.run(os.getenv('TOKEN'))
