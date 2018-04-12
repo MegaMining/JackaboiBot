@@ -43,8 +43,7 @@ async def on_message(message):
     if message.content.startswith('Marsh'):
         msg = '{0.author.mention} Marsh Is Awesome! :smiley: '.format(message)
         await client.send_message(message.channel, msg)
-    
-    @client.event
+   
 
 
 async def list_servers():
