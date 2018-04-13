@@ -12,7 +12,7 @@ client.remove_command("help")
 @client.event
 async def on_ready():
     print("Thankyou For Using Jackaboi Bot!")
-    await client.change_presence(game=discord.Game(name="+commands | Olive Oil ❤"))
+    await client.change_presence(game=discord.Game(name="+commands!"))
 
 @client.event
 async def on_message(message):
