@@ -38,12 +38,6 @@ async def on_message(message):
         msg = 'This Command Is Disabled By Jackaboi#8319'.format(message)
         await client.send_message(message.channel, msg)
     await client.process_commands(message)
-    if message.content.startswith('marsh'):
-        msg = '{0.author.mention} Marsh Is Awesome! :smiley: '.format(message)
-        await client.send_message(message.channel, msg)
-    if message.content.startswith('Marsh'):
-        msg = '{0.author.mention} Marsh Is Awesome! :smiley: '.format(message)
-        await client.send_message(message.channel, msg)
    
     if message.content.startswith('+say'):
         args = message.content.split(" ")
