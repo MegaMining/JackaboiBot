@@ -39,7 +39,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('+website') and message.author.id == 338071152213753867:
-        client.send_message(message.channel,"www.google.com")
+        client.send_message(message.channel, "www.google.com")
     else:
         await client.send_message("You Cannot Use This Command")    
         
