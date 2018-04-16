@@ -38,10 +38,10 @@ async def on_message(message):
         msg = 'This Command Is Disabled By Jackaboi#8319'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('+website') and message.author.id == 338071152213753867:
-        client.send_message(message.channel, "www.google.com")
+    if message.content.startswith('+test') and message.author.id == 338071152213753867:
+        await client.send_message(message.channel, "www.google.com")
     else:
-        send_message(message.channel, "You Cannot Use This Command")    
+        await client.send_message(message.channel, "You Cannot Use This Command")    
         
         
     await client.process_commands(message)
