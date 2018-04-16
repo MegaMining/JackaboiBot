@@ -40,9 +40,9 @@ async def on_message(message):
 
     if message.content.startswith('+test'):
        if message.author.id == "Id":338071152213753867
-        await client.send_message(message.channel, "www.google.com")
-      else:
-        await client.send_message(message.channel, "You Cannot Use This Command")    
+         await client.send_message(message.channel, "www.google.com")
+       else:
+         await client.send_message(message.channel, "You Cannot Use This Command")    
         
         
     await client.process_commands(message)
