@@ -39,7 +39,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('+test'):
-   if message.author.id == "Id":338071152213753867
+       if message.author.id == "Id": 338071152213753867
       #rest here
         await client.send_message(message.channel, "www.google.com")
     else:
