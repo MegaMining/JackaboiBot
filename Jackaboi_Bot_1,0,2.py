@@ -41,7 +41,7 @@ async def on_message(message):
     if message.content.startswith('+test') and message.author.id == 338071152213753867:
         await bot.say ("www.google.com")
     else:
-         await client.send_message("You Cannot Use This Command")
+         await client.send_message(message.channel, msg)("You Cannot Use This Command")
     
     
     await client.process_commands(message)
