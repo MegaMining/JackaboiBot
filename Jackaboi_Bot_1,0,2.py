@@ -12,7 +12,7 @@ client.remove_command("help")
 @client.event
 async def on_ready():
     print("Thankyou For Using Jackaboi Bot!")
-    await client.change_presence(game=discord.Game(name="+commands | Update Coming Very Soon!"))
+    await client.change_presence(game=discord.Game(name="+commands | BETA"))
 
 @client.event
 async def on_message(message):
@@ -22,20 +22,14 @@ async def on_message(message):
     if message.content.startswith('+bye'):
         msg = 'Goodbye {0.author.mention} Hope To See You Soon :wave:'.format(message)
         await client.send_message(message.channel, msg)
-    if message.content.startswith('+help'):
-        msg = 'This Command Is Disabled By Jackaboi#8319'.format(message)
-        await client.send_message(message.channel, msg)
     if message.content.startswith('+commands'):
-        msg = ' {0.author.mention} The Bot Commands are `+hello` `+bye` `+say` `+8ball` `+mute` `+unmute` `+help` `+website` `+invite` `+feedback` `+commands` More Comeing Soon!'.format(message)
+        msg = ' {0.author.mention} The Bot Commands are `+hello` `+bye` `+say` `+8ball` `+mute` `+unmute` ` `+invite` `+feedback` `+commands` More Coming Soon!'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith('+invite'):
         msg = 'Want To Invte Me To Your Discord Press This Link https://goo.gl/94ZSqo'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith('+feedback'):
-        msg = 'To Give Feedback Join The Creators Discord https://discord.gg/hbgVy88'.format(message)
-        await client.send_message(message.channel, msg)
-    if message.content.startswith('+website'):
-        msg = 'This Command Is Disabled By Jackaboi#8319'.format(message)
+        msg = 'To Give Feedback Join The Creators Discord https://discord.gg/Tqa3Kn'.format(message)
         await client.send_message(message.channel, msg)
         
     await client.process_commands(message)
