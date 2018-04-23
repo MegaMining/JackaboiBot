@@ -31,6 +31,11 @@ async def on_message(message):
     if message.content.startswith('+feedback'):
         msg = 'To Give Feedback Join The Creators Discord https://discord.gg/Tqa3Kn'.format(message)
         await client.send_message(message.channel, msg)
+    
+    if message.content.startswith('+version'):
+        msg = 'Jackaboi Bot Is In Version 1.0.3 Beta'.format(message)
+        await client.send_message(message.channel, msg)    
+        
         
     await client.process_commands(message)
    
