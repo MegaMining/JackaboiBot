@@ -7,39 +7,39 @@ import os
 import random
 
 Client = discord.Client()
-client = commands.Bot(command_prefix = "+")
+client = commands.Bot(command_prefix = ";")
 client.remove_command("help")
 @client.event
 async def on_ready():
     print("Thankyou For Using Jackaboi Bot!")
-    await client.change_presence(game=discord.Game(name="+commands | BETA"))
+    await client.change_presence(game=discord.Game(name=";commands | BETA"))
 
 @client.event
 async def on_message(message):
-    if message.content.startswith('+hello'):
+    if message.content.startswith(';hello'):
         msg = 'Hello {0.author.mention} How Are You Today'.format(message)
         await client.send_message(message.channel, msg)
-    if message.content.startswith('+bye'):
+    if message.content.startswith(';bye'):
         msg = 'Goodbye {0.author.mention} Hope To See You Soon :wave:'.format(message)
         await client.send_message(message.channel, msg)
-    if message.content.startswith('+commands'):
-        msg = ' {0.author.mention} The Bot Commands are `+hello` `+bye` `+say` `+8ball` `+mute` `+unmute` `+invite` `+feedback` `+version` `+commands` More Coming Soon!'.format(message)
+    if message.content.startswith(';help'):
+        msg = ' {0.author.mention} The Bot Commands are `;hello` `;bye` `;say` `;8ball` `;mute` `;unmute` `;invite` `;feedback` `;version` `;help` More Coming Soon!'.format(message)
         await client.send_message(message.channel, msg)
-    if message.content.startswith('+invite'):
+    if message.content.startswith(';invite'):
         msg = 'Want To Invte Me To Your Discord Press This Link https://goo.gl/94ZSqo'.format(message)
         await client.send_message(message.channel, msg)
-    if message.content.startswith('+feedback'):
-        msg = 'To Give Feedback Join The Creators Discord https://discord.gg/Tqa3Kn'.format(message)
+    if message.content.startswith(';feedback'):
+        msg = 'To Give Feedback Join The Creators Discord [Outdated Link]'.format(message)
         await client.send_message(message.channel, msg)
     
-    if message.content.startswith('+version'):
+    if message.content.startswith(';version'):
         msg = 'Jackaboi Bot Is In Version 1.0.3 Beta'.format(message)
         await client.send_message(message.channel, msg)    
         
         
     await client.process_commands(message)
    
-    if message.content.startswith('+say'):
+    if message.content.startswith(';say'):
         args = message.content.split(" ")
         #args[0] = +say
         #args[1] = Hey
