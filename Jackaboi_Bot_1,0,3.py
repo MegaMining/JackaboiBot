@@ -33,7 +33,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
     
     if message.content.startswith(';version'):
-        msg = 'Jackaboi Bot Is In Version 1.0.3 Beta'.format(message)
+        msg = 'V1.0.3 BETA - Build 60'.format(message)
         await client.send_message(message.channel, msg)    
         
         
