@@ -23,7 +23,7 @@ async def on_message(message):
         msg = 'Goodbye {0.author.mention} Hope To See You Soon :wave:'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith('+commands'):
-        msg = ' {0.author.mention} The Bot Commands are `+hello` `+bye` `+say` `+8ball` `+mute` `+unmute`  `+invite` `+feedback` `version` `+commands` More Coming Soon!'.format(message)
+        msg = ' {0.author.mention} The Bot Commands are `+hello` `+bye` `+say` `+8ball` `+mute` `+unmute`  `+invite` `+feedback` `+version` `+commands` More Coming Soon!'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith('+invite'):
         msg = 'Want To Invte Me To Your Discord Press This Link https://goo.gl/94ZSqo'.format(message)
