@@ -23,7 +23,7 @@ async def on_message(message):
         msg = 'Goodbye {0.author.mention} Hope To See You Soon :wave:'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith(';help'):
-        msg = 'Bot Prefix ;\nhello\nbye\nsay\n8ball\nmute\nunmute\ninvite\nfeedback\nversion\nhelp\nMore Coming Soon!'.format(message)
+        msg = 'Bot Prefix `;`\nhello\nbye\nsay\n8ball\nmute\nunmute\ninvite\nfeedback\nversion\nhelp\nMore Coming Soon!'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith(';invite'):
         msg = 'Want To Invte Me To Your Discord Press This Link https://goo.gl/94ZSqo'.format(message)
@@ -33,7 +33,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
     
     if message.content.startswith(';version'):
-        msg = 'V1.0.3 BETA\nBuild 67'.format(message)
+        msg = 'V1.0.3 BETA\nBuild 68'.format(message)
         await client.send_message(message.channel, msg)    
         
         
