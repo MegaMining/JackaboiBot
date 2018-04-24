@@ -31,6 +31,35 @@ async def on_message(message):
     if message.content.startswith(';feedback'):
         msg = 'To Give Feedback Join The Creators Discord [Outdated Link]'.format(message)
         await client.send_message(message.channel, msg)
+    if message.content.upper().startswith(";RPS"):
+        args = message.content.upper().split(" ")
+        k = random.randint(1,3)
+        if len(args) == 1:
+            await client.send_message(message.channel, "No arguments provided")
+        else:
+            if args[1].upper() == "SCISSOR":
+                if k == 1:
+                    await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))
+                elif k == 2:
+                    await client.send_message(message.channel, "<@%s> You win cool! :cool:" % (message.author.id))
+                else:
+                    await client.send_message(message.channel, "<@%s> Tie! :P:" % (message.author.id))
+            elif args[1].upper() == "ROCK":
+                if k == 1:
+                    await client.send_message(message.channel, "<@%s> Tie!" % (message.author.id))
+                elif k == 2:
+                    await client.send_message(message.channel, "<@%s> aww you lost :cry:" % (message.author.id))
+                else:
+                    await client.send_message(message.channel, "<@%s> you win cool! :cool:" % (message.author.id))
+            elif args[1].upper() == "PAPER":
+                if k == 1:
+                    await client.send_message(message.channel, "<@%s> You win cool! :cool:" % (message.author.id))
+                elif k == 2:
+                    await client.send_message(message.channel, "<@%s> Tie!" % (message.author.id))
+                else:
+                    await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))
+            else:
+                await client.send_message(message.channel, "<@%s> Invalid argument try k!help" % (message.author.id))
     if message.content.startswith(';version'):
         msg = 'V1.0.3 BETA\nBuild:71'.format(message)
         await client.send_message(message.channel, msg)    
