@@ -58,10 +58,9 @@ async def on_message(message):
                     await client.send_message(message.channel, "<@%s> Tie!" % (message.author.id))
                 else:
                     await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))
-            else:
-                await client.send_message(message.channel, "<@%s> Invalid argument try k!help" % (message.author.id))
+          
     if message.content.startswith(';version'):
-        msg = 'V1.0.3 BETA\nBuild:73'.format(message)
+        msg = 'V1.0.3 BETA\nBuild:74'.format(message)
         await client.send_message(message.channel, msg)    
         
         
