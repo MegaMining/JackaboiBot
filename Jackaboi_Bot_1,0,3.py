@@ -12,7 +12,7 @@ client.remove_command("help")
 @client.event
 async def on_ready():
     print("Thankyou For Using Jackaboi Bot!")
-    await client.change_presence(game=discord.Game(name=";help | BETA"))
+    await client.change_presence(game=discord.Game(name=";help | jackaboi-bot.ga"))
 
 @client.event
 async def on_message(message):
@@ -60,7 +60,7 @@ async def on_message(message):
                     await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))
           
     if message.content.startswith(';version'):
-        msg = 'V1.0.3 BETA\nBuild:74'.format(message)
+        msg = 'V1.0.3 BETA\nBuild:75'.format(message)
         await client.send_message(message.channel, msg)    
         
         
