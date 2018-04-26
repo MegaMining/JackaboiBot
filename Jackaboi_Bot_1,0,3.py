@@ -36,7 +36,8 @@ async def on_message(message):
         msg = 'Hello {message.author.mention} How Are You Today'
         await client.send_message(message.channel, msg)
 else:
-    only Jackaboi#8319 Can Use This Command
+    only Jackaboi#8319 Can Use This Command!
+    
     if message.content.upper().startswith(";RPS"):
         args = message.content.upper().split(" ")
         k = random.randint(1,3)
