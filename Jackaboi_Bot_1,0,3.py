@@ -1,4 +1,4 @@
-mport discord
+import discord
 from discord.ext.commands import Bot
 from discord.ext import commands
 import asyncio
@@ -61,7 +61,7 @@ async def on_message(message):
                     await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))
          
     if message.content.startswith(';version'):
-        msg = 'V1.0.3 BETA\nBuild:81'.format(message)
+        msg = 'V1.0.3 BETA\nBuild:82'.format(message)
         await client.send_message(message.channel, msg)    
        
        
