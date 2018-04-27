@@ -5,7 +5,7 @@ import asyncio
 import time
 import os
 import random
-
+ 
 Client = discord.Client()
 client = commands.Bot(command_prefix = ";")
 client.remove_command("help")
@@ -13,7 +13,7 @@ client.remove_command("help")
 async def on_ready():
     print("Thankyou For Using Jackaboi Bot!")
     await client.change_presence(game=discord.Game(name=";help | jackaboi-bot.ga"))
-
+ 
 @client.event
 async def on_message(message):
     if message.content.startswith(';hello'):
@@ -44,7 +44,7 @@ async def on_message(message):
                 elif k == 2:
                     await client.send_message(message.channel, "<@%s> You win cool! :cool:" % (message.author.id))
                 else:
-                    await client.send_message(message.channel, "<@%s> Tie! :P:" % (message.author.id))
+                    await client.send_message(message.channel, "<@%s> Tie! " % (message.author.id))
             elif args[1].upper() == "ROCK":
                 if k == 1:
                     await client.send_message(message.channel, "<@%s> Tie!" % (message.author.id))
@@ -59,12 +59,12 @@ async def on_message(message):
                     await client.send_message(message.channel, "<@%s> Tie!" % (message.author.id))
                 else:
                     await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))
-          
+         
     if message.content.startswith(';version'):
-        msg = 'V1.0.3 BETA\nBuild:75'.format(message)
+        msg = 'V1.0.3 BETA\nBuild:76'.format(message)
         await client.send_message(message.channel, msg)    
-        
-        
+       
+       
     await client.process_commands(message)
    
     if message.content.startswith(';say'):
@@ -74,7 +74,7 @@ async def on_message(message):
         #args[2] = There
         #args[1:] = Hey There
         await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
-        
+       
 @client.command(name='8ball',
                 description="Answers a yes/no question.",
                 brief="Answers from the beyond.",
@@ -96,7 +96,7 @@ async def list_servers():
         for server in client.servers:
             print(server.name)
         await asyncio.sleep(600)
-
+ 
 @client.command(pass_context = True)
 async def mute(ctx, member: discord.Member, time: int, *,reason: str):
     em = discord.Embed(title="User muted!", description=None, color=0x20f911)
@@ -105,26 +105,29 @@ async def mute(ctx, member: discord.Member, time: int, *,reason: str):
     em.add_field(name="Reason: ", value=f"{reason}")
     em.set_thumbnail(url=member.avatar_url)
     role = discord.utils.get(member.server.roles, name="Muted")
+    if role == None:
+        await client.create_role(ctx.message.server, name="Muted")
+        role = discord.utils.get(member.server.roles, name="Muted")
     time_min = time * 60
-    if ctx.message.author.server_permissions.administrator:
+    if ctx.message.author.server_permissions.administrator or ctx.message.author.id == '344967220025098242':
         await client.add_roles(member, role)
         await client.say(" {} Has been muted for {} minutes! :white_check_mark:".format(member.mention, time))
         await asyncio.sleep(time_min)
         await client.remove_roles(member, role)
-        await client.say("{} has been unmuted! :smiley:".format(member))     
+        await client.say("{} has been unmuted! :smiley:".format(member))    
     else:
         await client.say("You don't have permission to execute this command! :stuck_out_tongue: ")
-
+ 
 @client.command(pass_context=True)
 async def unmute(ctx, member: discord.Member):
     role = discord.utils.get(member.server.roles, name="Muted")
-    if ctx.message.author.server_permissions.administrator:
+    if ctx.message.author.server_permissions.administrator or ctx.message.author.id == '344967220025098242':
         await client.remove_roles(member, role)
         await client.say("{} has been unmuted! :white_check_mark: ".format(member.mention))
     else:
         await client.say("You don't have permissions to execute these command! :stuck_out_tongue: ")
    
-
+ 
 #Always all if message.content all of then on async def on_message not on bottom
 client.loop.create_task(list_servers())
 client.run(os.getenv('TOKEN'))
