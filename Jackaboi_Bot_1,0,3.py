@@ -32,7 +32,7 @@ async def on_message(message):
         msg = 'To Give Feedback Join The Creators Discord [Outdated Link]'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith(';contributors'):
-        msg = 'Many People Have Been Helping Me With The Making Of This Bot Here Is A List Of The Kind People\nElk - 8ball\nKushrox - rps\nEpicShardsGaming - jack (fixes my errors)\nMrCakeSlayer - most stuff'.format(message)
+        msg = 'Many People Have Been Helping Me With The Making Of This Bot Here Is A List Of The Kind People\nElk - 8ball\nKushrox - rps\nEpicShardsGaming - jack (fixes my errors)\nMrCakeSlayer - most stuff\nLayoffins - mute/unmute\nIf I Missed Anyone Off Please Let Me Know!'.format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith(';website'):
@@ -71,7 +71,7 @@ async def on_message(message):
                     await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))
          
     if message.content.startswith(';version'):
-        msg = 'V1.0.3 BETA\nBuild:88'.format(message)
+        msg = 'V1.0.3 BETA\nBuild:89'.format(message)
         await client.send_message(message.channel, msg)    
        
        
