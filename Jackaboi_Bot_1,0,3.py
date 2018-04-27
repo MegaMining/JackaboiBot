@@ -31,6 +31,10 @@ async def on_message(message):
     if message.content.startswith(';feedback'):
         msg = 'To Give Feedback Join The Creators Discord [Outdated Link]'.format(message)
         await client.send_message(message.channel, msg)
+    if message.content.startswith(';contributors'):
+        msg = 'Many People Have Been Helping Me With The Making Of This Bot Here Is A List Of The Kind People\Elk - 8ball\nKushrox - rps\nEpicShardsGaming - jack (fixes my errors)\nMrCakeSlayer - most stuff'.format(message)
+        await client.send_message(message.channel, msg)
+
     if message.content.startswith(';website'):
         if message.author.id == "344967220025098242":
             msg = '{0.author.mention} The Bot Website Is [Soon To Come]'.format(message)
@@ -67,7 +71,7 @@ async def on_message(message):
                     await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))
          
     if message.content.startswith(';version'):
-        msg = 'V1.0.3 BETA\nBuild:86'.format(message)
+        msg = 'V1.0.3 BETA\nBuild:87'.format(message)
         await client.send_message(message.channel, msg)    
        
        
