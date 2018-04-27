@@ -23,7 +23,7 @@ async def on_message(message):
         msg = 'Goodbye {0.author.mention} Hope To See You Soon :wave:'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith(';help'):
-        msg = 'Bot Prefix `;`\nhello\nbye\nsay\n8ball\nmute\nunmute\ninvite\nfeedback\nversion\nrps\nhelp\njack\nMore Coming Soon!'.format(message)
+        msg = 'Bot Prefix `;`\nhello\nbye\nsay\n8ball\nmute\nunmute\ninvite\nfeedback\nversion\nrps\nhelp\njack\nwebsite\nMore Coming Soon!'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith(';invite'):
         msg = 'Want To Invte Me To Your Discord Press This Link https://goo.gl/94ZSqo'.format(message)
@@ -31,6 +31,12 @@ async def on_message(message):
     if message.content.startswith(';feedback'):
         msg = 'To Give Feedback Join The Creators Discord [Outdated Link]'.format(message)
         await client.send_message(message.channel, msg)
+    if message.content.startswith(';website'):
+        if message.author.id == "344967220025098242":
+            msg = '{0.author.mention} The Bot Website Is [Soon To Come]'.format(message)
+            await client.send_message(message.channel, msg)
+        else: 
+            await client.send_message(message.channel, "Only Jackaboi#8319 Do This As The Website Is Not Public Yet!")
  
     if message.content.upper().startswith(";RPS"):
         args = message.content.upper().split(" ")
@@ -61,7 +67,7 @@ async def on_message(message):
                     await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))
          
     if message.content.startswith(';version'):
-        msg = 'V1.0.3 BETA\nBuild:82'.format(message)
+        msg = 'V1.0.3 BETA\nBuild:84'.format(message)
         await client.send_message(message.channel, msg)    
        
        
