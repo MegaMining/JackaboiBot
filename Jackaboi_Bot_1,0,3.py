@@ -23,7 +23,7 @@ async def on_message(message):
         msg = 'Goodbye {0.author.mention} Hope To See You Soon :wave:'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith(';help'):
-        msg = 'Bot Prefix `;`\nhello\nbye\nsay\n8ball\nmute\nunmute\ninvite\nfeedback\nversion\nrps\nhelp\njack\nwebsite\nMore Coming Soon!'.format(message)
+        msg = 'Bot Prefix `;`\nhello\nbye\nsay\n8ball\nmute\nunmute\ninvite\nfeedback\nversion\nrps\nhelp\njack\nwebsite\ncontributors\nMore Coming Soon!'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith(';invite'):
         msg = 'Want To Invte Me To Your Discord Press This Link https://goo.gl/94ZSqo'.format(message)
@@ -32,7 +32,7 @@ async def on_message(message):
         msg = 'To Give Feedback Join The Creators Discord [Outdated Link]'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith(';contributors'):
-        msg = 'Many People Have Been Helping Me With The Making Of This Bot Here Is A List Of The Kind People\Elk - 8ball\nKushrox - rps\nEpicShardsGaming - jack (fixes my errors)\nMrCakeSlayer - most stuff'.format(message)
+        msg = 'Many People Have Been Helping Me With The Making Of This Bot Here Is A List Of The Kind People\nElk - 8ball\nKushrox - rps\nEpicShardsGaming - jack (fixes my errors)\nMrCakeSlayer - most stuff'.format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith(';website'):
@@ -71,7 +71,7 @@ async def on_message(message):
                     await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))
          
     if message.content.startswith(';version'):
-        msg = 'V1.0.3 BETA\nBuild:87'.format(message)
+        msg = 'V1.0.3 BETA\nBuild:88'.format(message)
         await client.send_message(message.channel, msg)    
        
        
