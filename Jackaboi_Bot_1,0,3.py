@@ -67,9 +67,10 @@ async def on_message(message):
                 else:
                     await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))
          
-    if message.content.startswith(';version'):
-        msg = 'V1.0.4 BETA\nBuild:102'.format(message)
-        await client.send_message(message.channel, msg)    
+    async def version(ctx):
+    embed=discord.Embed(title="", description="""
+V1.0.4 Beta | Build:103 """, color=0x66009D)
+    await client.say(embed=embed)   
        
        
     await client.process_commands(message)
