@@ -136,8 +136,6 @@ async def jack(ctx):
         await client.add_roles(ctx.message.author, role)
     else:
         return await client.say("Only Jackaboi#8319 Can Use This Command!")
-    else:
-        return await client.say("Only Jackaboi#8319 Can Use This Command!")
 
 @client.command(pass_context=True)
 async def unmute(ctx, member: discord.Member):
