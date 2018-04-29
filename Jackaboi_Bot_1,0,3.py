@@ -12,7 +12,7 @@ client.remove_command('help')
 @client.event
 async def on_ready():
     print("Thankyou For Using Jackaboi Bot!")
-    await client.change_presence(game=discord.Game(name=";help"))
+    await client.change_presence(game=discord.Game(name=";help", url="https://www.twitch.tv/theandroidgamer18", type=1))
  
 @client.event
 async def on_message(message):
@@ -172,4 +172,4 @@ async def unmute(ctx, member: discord.Member):
  
 #Always all if message.content all of then on async def on_message not on bottom
 client.loop.create_task(list_servers())
-client.run('NDM3NjU3MDUzNzU5MDEyODY0.DcdnpQ.W_cDXncXceqSfER6Ikm55ShFFw0')
+client.run(os.getenv('TOKEN'))
