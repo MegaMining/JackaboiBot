@@ -8,7 +8,7 @@ import random
  
 Client = discord.Client()
 client = commands.Bot(command_prefix = ";")
-client.remove_command("help")
+client.remove_command('help')
 @client.event
 async def on_ready():
     print("Thankyou For Using Jackaboi Bot!")
@@ -21,9 +21,6 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
     if message.content.startswith(';bye'):
         msg = 'Goodbye {0.author.mention} Hope To See You Soon :wave:'.format(message)
-        await client.send_message(message.channel, msg)
-    if message.content.startswith(';help'):
-        msg = 'Bot Prefix `;`\nhello\nbye\nsay\n8ball\nmute\nunmute\ninvite\nfeedback\nversion\nrps\nhelp\njack\nwebsite\ncontributors\nMore Coming Soon!'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith(';invite'):
         msg = 'Want To Invte Me To Your Discord Press This Link https://goo.gl/94ZSqo'.format(message)
@@ -143,6 +140,25 @@ async def jack(ctx):
         await client.add_roles(ctx.message.author, role)
     else:
         return await client.say("Only Jackaboi#8319 Can Use This Command!")
+@client.command(pass_context=True)
+async def help(ctx):
+    embed=discord.Embed(title="Help", description="""Bot Prefix ';'
+hello
+bye
+say
+8ball
+mute
+unmute
+invite
+feedback
+version
+rps
+help
+jack
+website
+contributors
+More Coming Soon!""", color=0x66009D)
+    await client.say(embed=embed)
 
 @client.command(pass_context=True)
 async def unmute(ctx, member: discord.Member):
@@ -152,8 +168,8 @@ async def unmute(ctx, member: discord.Member):
         await client.say("{} has been unmuted! :white_check_mark: ".format(member.mention))
     else:
         await client.say("You don't have permissions to execute these command! :stuck_out_tongue: ")
-   
+
  
 #Always all if message.content all of then on async def on_message not on bottom
 client.loop.create_task(list_servers())
-client.run(os.getenv('TOKEN'))
+client.run('NDM3NjU3MDUzNzU5MDEyODY0.DcdnpQ.W_cDXncXceqSfER6Ikm55ShFFw0')
