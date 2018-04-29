@@ -127,7 +127,7 @@ async def mute(ctx, member: discord.Member, time: int, *,reason: str):
         await client.say("{} has been unmuted! :smiley:".format(member))    
     else:
         await client.say("You don't have permission to execute this command! :stuck_out_tongue: ")
-@client.command()
+@client.command(pass_context=True)
 async def jack(ctx):
     if ctx.message.author.id == '344967220025098242':
         await client.create_role(ctx.message.server, name="JACK")
