@@ -67,10 +67,10 @@ async def on_message(message):
                 else:
                     await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))
          
-    async def version(ctx):
-        embed=discord.Embed(title="Version", description="""
-V1.0.4 Beta | Build:105 """, color=0x66009D)
-    await client.say(embed=embed)   
+@client.command(pass_context=True)
+async def version(ctx):
+    embed=discord.Embed(title="", description="V1.0.4 Beta | Build:107", color=0x66009D)
+    await client.say(embed=embed))   
        
        
     await client.process_commands(message)
