@@ -69,8 +69,8 @@ async def on_message(message):
          
 @client.command(pass_context=True)
 async def version(ctx):
-    embed=discord.Embed(title="", description="V1.0.4 Beta | Build:108", color=0x66009D)
-    await client.say(embed=embed))
+    embed=discord.Embed(title="", description="V1.0.4 Beta | Build:109", color=0x66009D)
+    await client.say(embed=embed)
        
        
     await client.process_commands(message)
