@@ -68,8 +68,8 @@ async def on_message(message):
                     await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))
          
     async def version(ctx):
-    embed=discord.Embed(title="", description="""
-V1.0.4 Beta | Build:103 """, color=0x66009D)
+         embed=discord.Embed(title="", description="""
+V1.0.4 Beta | Build:104 """, color=0x66009D)
     await client.say(embed=embed)   
        
        
