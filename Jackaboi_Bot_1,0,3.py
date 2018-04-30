@@ -158,12 +158,12 @@ async def version(ctx):
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def contributors(ctx):
-    embed=discord.Embed(title="People Who Have Helped Me!", description="Elk
+    embed=discord.Embed(title="People Who Have Helped Me!", description="If I Missed Anyone Off Please Let Me Know!
+Elk
 Kushrox
 EpicShardsGaming
 MrCakeSlayer
-Layoffins
-If I Missed Anyone Off Please Let Me Know!", color=0xCAC5E3)
+Layoffins", color=0xCAC5E3)
     await client.say(embed=embed)
 
 @client.command(pass_context=True)
