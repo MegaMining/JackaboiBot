@@ -156,9 +156,9 @@ website
 contributors
 More Coming Soon!""", color=0x66009D)
     await client.say(embed=embed)
-
+@client.command(pass_context=True)
 async def version(ctx):
-    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:108", color=0x66009D)
+    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:112", color=0x66009D)
     await client.say(embed=embed)
 
    @client.command(pass_context=True)
