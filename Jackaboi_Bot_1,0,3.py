@@ -158,7 +158,16 @@ More Coming Soon!""", color=0x66009D)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def version(ctx):
-    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:113", color=0x66009D)
+    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:114", color=0x66009D)
+    await client.say(embed=embed)
+@client.command(pass_context=True)
+async def contributors(ctx):
+    embed=discord.Embed(title="Many People Have Been Helping Me With The Making Of This Bot Here Is A List Of The Kind People!", description="Elk
+Kushrox
+EpicShardsGaming
+MrCakeSlayer
+Layoffins
+If I Missed Anyone Off Please Let Me Know!", color=0xCAC5E3)
     await client.say(embed=embed)
 
 @client.command(pass_context=True)
