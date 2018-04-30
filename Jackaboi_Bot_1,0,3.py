@@ -28,10 +28,6 @@ async def on_message(message):
     if message.content.startswith(';feedback'):
         msg = 'To Give Feedback Join The Creators Discord [Outdated Link]'.format(message)
         await client.send_message(message.channel, msg)
-    if message.content.startswith(';contributors'):
-        msg = 'Many People Have Been Helping Me With The Making Of This Bot Here Is A List Of The Kind People\nElk - 8ball\nKushrox - rps\nEpicShardsGaming - jack (fixes my errors)\nMrCakeSlayer - most stuff\nLayoffins - mute/unmute\nIf I Missed Anyone Off Please Let Me Know!'.format(message)
-        await client.send_message(message.channel, msg)
-
     if message.content.startswith(';website'):
         if message.author.id == "344967220025098242":
             msg = '{0.author.mention} The Bot Website Is [Soon To Come]'.format(message)
@@ -162,7 +158,7 @@ async def version(ctx):
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def contributors(ctx):
-    embed=discord.Embed(title="Many People Have Been Helping Me With The Making Of This Bot Here Is A List Of The Kind People!", description="Elk
+    embed=discord.Embed(title="People Who Have Helped Me!", description="Elk
 Kushrox
 EpicShardsGaming
 MrCakeSlayer
