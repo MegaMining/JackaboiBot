@@ -157,7 +157,11 @@ contributors
 More Coming Soon!""", color=0x66009D)
     await client.say(embed=embed)
 
-@client.command(pass_context=True)
+async def version(ctx):
+    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:108", color=0x66009D)
+    await client.say(embed=embed)
+
+   @client.command(pass_context=True)
 async def unmute(ctx, member: discord.Member):
     role = discord.utils.get(member.server.roles, name="Muted")
     if ctx.message.author.server_permissions.administrator or ctx.message.author.id == '344967220025098242':
