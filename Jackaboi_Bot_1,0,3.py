@@ -25,9 +25,6 @@ async def on_message(message):
     if message.content.startswith(';invite'):
         msg = 'Want To Invte Me To Your Discord Press This Link https://goo.gl/94ZSqo'.format(message)
         await client.send_message(message.channel, msg)
-    if message.content.startswith(';feedback'):
-        msg = 'To Give Feedback Join The Creators Discord [Outdated Link]'.format(message)
-        await client.send_message(message.channel, msg)
     if message.content.startswith(';website'):
         if message.author.id == "344967220025098242":
             msg = '{0.author.mention} The Bot Website Is [Soon To Come]'.format(message)
@@ -154,13 +151,16 @@ More Coming Soon!""", color=0x66009D)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def version(ctx):
-    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:118", color=0xFCFF0F)
+    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:119", color=0xFCFF0F)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def contributors(ctx):
     embed=discord.Embed(title="People Who Have Helped Me!", description="If I Missed Anyone Off Please Let Me Know!\nElk\nKushrox\nEpicShardsGaming\nMrCakeSlayer\nLayoffins", color=0xFF0F)
     await client.say(embed=embed)
-
+@client.command(pass_context=True)
+async def feedback(ctx):
+    embed=discord.Embed(title="Feedback", description="To Give Feedback Join The Creators Discord https://discord.gg/3kEdHXy", color=0xC6)
+    await client.say(embed=embed)
 @client.command(pass_context=True)
 async def unmute(ctx, member: discord.Member):
     role = discord.utils.get(member.server.roles, name="Muted")
