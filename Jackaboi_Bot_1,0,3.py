@@ -151,7 +151,7 @@ More Coming Soon!""", color=0x66009D)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def version(ctx):
-    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:120", color=0xFCFF0F)
+    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:121", color=0xFCFF0F)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def contributors(ctx):
@@ -162,6 +162,12 @@ async def feedback(ctx):
     embed=discord.Embed(title="Feedback", description="To Give Feedback Join The Creators Discord https://discord.gg/3kEdHXy", color=0xC6)
     await client.say(embed=embed)
 @client.command(pass_context=True)
+async def invite(ctx):
+    embed=discord.Embed(title="Invite Me", description="Want To Invte Me To Your Discord Press This Link https://goo.gl/94ZSqo", color=0xFCFF0F)
+    await client.say(embed=embed)
+   
+   
+   @client.command(pass_context=True)
 async def unmute(ctx, member: discord.Member):
     role = discord.utils.get(member.server.roles, name="Muted")
     if ctx.message.author.server_permissions.administrator or ctx.message.author.id == '344967220025098242':
