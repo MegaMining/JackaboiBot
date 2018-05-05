@@ -22,9 +22,6 @@ async def on_message(message):
     if message.content.startswith(';bye'):
         msg = 'Goodbye {0.author.mention} Hope To See You Soon :wave:'.format(message)
         await client.send_message(message.channel, msg)
-    if message.content.startswith(';invite'):
-        msg = 'Want To Invte Me To Your Discord Press This Link https://goo.gl/94ZSqo'.format(message)
-        await client.send_message(message.channel, msg)
     if message.content.startswith(';website'):
         if message.author.id == "344967220025098242":
             msg = '{0.author.mention} The Bot Website Is [Soon To Come]'.format(message)
@@ -151,7 +148,7 @@ More Coming Soon!""", color=0x66009D)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def version(ctx):
-    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:121", color=0xFCFF0F)
+    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:122", color=0xFCFF0F)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def contributors(ctx):
@@ -163,7 +160,7 @@ async def feedback(ctx):
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def invite(ctx):
-    embed=discord.Embed(title="Invite Me", description="Want To Invte Me To Your Discord Press This Link https://goo.gl/94ZSqo", color=0xFCFF0F)
+    embed=discord.Embed(title="Invite Me", description="https://goo.gl/94ZSqo", color=0xFCFF0F)
     await client.say(embed=embed)
    
    
