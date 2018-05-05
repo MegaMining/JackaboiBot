@@ -22,13 +22,7 @@ async def on_message(message):
     if message.content.startswith(';bye'):
         msg = 'Goodbye {0.author.mention} Hope To See You Soon :wave:'.format(message)
         await client.send_message(message.channel, msg)
-    if message.content.startswith(';website'):
-        if message.author.id == "344967220025098242":
-            msg = '{0.author.mention} The Bot Website Is [Soon To Come]'.format(message)
-            await client.send_message(message.channel, msg)
-        else: 
-            await client.send_message(message.channel, "Only Jackaboi#8319 Do This As The Website Is Not Public Yet!")
- 
+       
     if message.content.upper().startswith(";RPS"):
         args = message.content.upper().split(" ")
         k = random.randint(1,3)
@@ -142,13 +136,12 @@ version
 rps
 help
 jack
-website
 contributors
 More Coming Soon!""", color=0x66009D)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def version(ctx):
-    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:123", color=0xFCFF0F)
+    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:124", color=0xFCFF0F)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def contributors(ctx):
