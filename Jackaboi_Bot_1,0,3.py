@@ -12,7 +12,7 @@ client.remove_command('help')
 @client.event
 async def on_ready():
     print("Thankyou For Using Jackaboi Bot!")
-    await client.change_presence(game=discord.Game(name=";help", url="https://www.twitch.tv/theandroidgamer18", type=1))
+    await client.change_presence(game=discord.Game(name=";help | under maintenance!"))
  
 @client.event
 async def on_message(message):
@@ -141,7 +141,7 @@ More Coming Soon!""", color=0x66009D)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def version(ctx):
-    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:124", color=0xFCFF0F)
+    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:125", color=0xFCFF0F)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def contributors(ctx):
@@ -149,7 +149,7 @@ async def contributors(ctx):
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def feedback(ctx):
-    embed=discord.Embed(title="Feedback", description="To Give Feedback Join The Creators Discord https://discord.gg/3kEdHXy", color=0xC6)
+    embed=discord.Embed(title="Feedback", description="To Give Feedback Join The Creators Discord https://discord.gg/Hdk2b3b", color=0xC6)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def invite(ctx):
