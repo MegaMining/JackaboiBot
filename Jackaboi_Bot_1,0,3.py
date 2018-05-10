@@ -141,11 +141,11 @@ More Coming Soon!""", color=0x66009D)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def version(ctx):
-    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:125", color=0xFCFF0F)
+    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:126", color=0xFCFF0F)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def contributors(ctx):
-    embed=discord.Embed(title="People Who Have Helped Me!", description="***If I Missed Anyone Off Please Let Me Know!***\nElk\nKushrox\nEpicShardsGaming\nMrCakeSlayer\nLayoffins", color=0xFF0F)
+    embed=discord.Embed(title="People Who Have Helped Me!", description="***If I Missed Anyone Off Please Let Me Know!***\nElk\nKushrox\nEpicShardsGaming\nMrCakeSlayer\nLayoffins\nPoly\nTheDeibo", color=0xFF0F)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def feedback(ctx):
