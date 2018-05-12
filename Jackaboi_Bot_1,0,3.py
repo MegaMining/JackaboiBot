@@ -51,6 +51,13 @@ async def on_message(message):
                 else:
                     await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))
         
+async def on_member_join(member: discord.Member):
+    serverchannel = discord.utils.get(member.server.channels, name="general")
+    role = discord.utils.get(member.server.roles, id="444834779544682506")
+    await client.add_roles(member, role)
+    emb1 = (discord.Embed(description=" Welcome <@%s> To Jacks Discord!" % (member.id), colour=0x3DF270))
+    emb1.set_author(name="Jackaboi bot")
+    await client.send_message(serverchannel, embed=emb1)        
        
        
     await client.process_commands(message)
