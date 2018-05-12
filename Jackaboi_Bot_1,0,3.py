@@ -140,7 +140,7 @@ More Coming Soon!""", color=0x66009D)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def version(ctx):
-    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:130", color=0xFCFF0F)
+    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:131", color=0xFCFF0F)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def contributors(ctx):
@@ -156,12 +156,9 @@ async def invite(ctx):
     await client.say(embed=embed)
 @client.event
 async def on_member_join(member: discord.Member):
-    serverchannel = discord.utils.get(member.server.channels, name="general")
-    role = discord.utils.get(member.server.roles, id="444834779544682506")
-    await client.add_roles(member, role)
-    emb1 = (discord.Embed(description=" Welcome <@%s> To Jacks Discord!" % (member.id), colour=0x3DF270))
-    emb1.set_author(name="Jackaboi bot")
-    await client.send_message(serverchannel, embed=emb1)  
+    embed = discord.Embed(title="User Joined!", description="{} Has Just Joined Us! You are the {}th user of the season.".format(member.name, str(NP)), color=0x1eff0f)
+    embed.set_thumbnail(url=member.avatar_url)
+    await client.send_message(client.get_channel('428174582814343188')l, embed=embed)  
    
 @client.command(pass_context=True)
 async def unmute(ctx, member: discord.Member):
