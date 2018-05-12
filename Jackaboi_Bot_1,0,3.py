@@ -158,7 +158,7 @@ async def invite(ctx):
 async def on_member_join(member: discord.Member):
     embed = discord.Embed(title="User Joined!", description="{user} Has Just Joined Us!".format(member.name, str(NP)), color=0x1eff0f)
     embed.set_thumbnail(url=member.avatar_url)
-    await client.send_message(client.get_channel('428174582814343188')l, embed=embed)  
+    await client.send_message(client.get_channel('428174582814343188'), embed=embed)  
    
 @client.command(pass_context=True)
 async def unmute(ctx, member: discord.Member):
