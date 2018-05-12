@@ -140,7 +140,7 @@ More Coming Soon!""", color=0x66009D)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def version(ctx):
-    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:126", color=0xFCFF0F)
+    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:130", color=0xFCFF0F)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def contributors(ctx):
@@ -154,7 +154,7 @@ async def feedback(ctx):
 async def invite(ctx):
     embed=discord.Embed(title="Invite Me", description="https://goo.gl/94ZSqo", color=0xFCFF0F)
     await client.say(embed=embed)
- 
+@client.event
 async def on_member_join(member: discord.Member):
     serverchannel = discord.utils.get(member.server.channels, name="general")
     role = discord.utils.get(member.server.roles, id="444834779544682506")
