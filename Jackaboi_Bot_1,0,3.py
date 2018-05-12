@@ -140,7 +140,7 @@ More Coming Soon!""", color=0x66009D)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def version(ctx):
-    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:133", color=0xFCFF0F)
+    embed=discord.Embed(title="Info", description="V1.0.4 Beta | Build:136", color=0xFCFF0F)
     await client.say(embed=embed)
 @client.command(pass_context=True)
 async def contributors(ctx):
@@ -154,11 +154,7 @@ async def feedback(ctx):
 async def invite(ctx):
     embed=discord.Embed(title="Invite Me", description="https://goo.gl/94ZSqo", color=0xFCFF0F)
     await client.say(embed=embed)
-@client.event
-async def on_member_join(member: discord.Member):
-    embed = discord.Embed(title="User Joined!", description="{user} Has Just Joined Us!".format(member.name, str(NP)), color=0x1eff0f)
-    embed.set_thumbnail(url=member.avatar_url)
-    await client.send_message(client.get_channel('428174582814343188'), embed=embed)  
+ 
    
 @client.command(pass_context=True)
 async def unmute(ctx, member: discord.Member):
