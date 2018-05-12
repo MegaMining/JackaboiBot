@@ -49,15 +49,7 @@ async def on_message(message):
                 elif k == 2:
                     await client.send_message(message.channel, "<@%s> Tie!" % (message.author.id))
                 else:
-                    await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))
-        
-async def on_member_join(member: discord.Member):
-    serverchannel = discord.utils.get(member.server.channels, name="general")
-    role = discord.utils.get(member.server.roles, id="444834779544682506")
-    await client.add_roles(member, role)
-    emb1 = (discord.Embed(description=" Welcome <@%s> To Jacks Discord!" % (member.id), colour=0x3DF270))
-    emb1.set_author(name="Jackaboi bot")
-    await client.send_message(serverchannel, embed=emb1)        
+                    await client.send_message(message.channel, "<@%s> awww you lost :cry:" % (message.author.id))        
        
        
     await client.process_commands(message)
@@ -162,7 +154,14 @@ async def feedback(ctx):
 async def invite(ctx):
     embed=discord.Embed(title="Invite Me", description="https://goo.gl/94ZSqo", color=0xFCFF0F)
     await client.say(embed=embed)
-   
+ 
+ async def on_member_join(member: discord.Member):
+    serverchannel = discord.utils.get(member.server.channels, name="general")
+    role = discord.utils.get(member.server.roles, id="444834779544682506")
+    await client.add_roles(member, role)
+    emb1 = (discord.Embed(description=" Welcome <@%s> To Jacks Discord!" % (member.id), colour=0x3DF270))
+    emb1.set_author(name="Jackaboi bot")
+    await client.send_message(serverchannel, embed=emb1)  
    
 @client.command(pass_context=True)
 async def unmute(ctx, member: discord.Member):
