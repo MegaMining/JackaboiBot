@@ -155,7 +155,7 @@ async def invite(ctx):
     embed=discord.Embed(title="Invite Me", description="https://goo.gl/94ZSqo", color=0xFCFF0F)
     await client.say(embed=embed)
  
- async def on_member_join(member: discord.Member):
+async def on_member_join(member: discord.Member):
     serverchannel = discord.utils.get(member.server.channels, name="general")
     role = discord.utils.get(member.server.roles, id="444834779544682506")
     await client.add_roles(member, role)
